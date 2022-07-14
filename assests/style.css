@@ -1,0 +1,41 @@
+
+
+/*--margin given to html body is 0% */
+/*box sizing is border box which  will help to give padding and margin 
+to the whole element*/
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+
+/*---------------------------------------------------Global classes*/
+a{
+    text-decoration: none;
+}
+/*text decoration none is given to remove the underline from the text*/
+
+/*-----------x--------------------x----------x----------Global classes*/
+
+
+
+/*--------------------------------------------------nav bar styling*/
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+}
+/*I use height and min-height to collapse the navigation menu*/
+/*---going to style the name blogger*/
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+
+/*-------x------------------x-------------------x-------nav bar styling*/
+
+

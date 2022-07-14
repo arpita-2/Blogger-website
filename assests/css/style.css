@@ -1,0 +1,76 @@
+/*--margin given to html body is 0% */
+/*box sizing is border box which  will help to give padding and margin 
+to the whole element*/
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+
+/*---------------------------------------------------Global classes*/
+a{
+    text-decoration: none;
+}
+/*text decoration none is given to remove the underline from the text*/
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+/*creates the links on the same row*/
+/* flexx wrap is given because when we try to squeeze the size of display then the social media icons
+will come together below the first line. It will not show that some icons are present on 
+upper side and some are in below part*/
+
+ul{
+    list-style-type: none;
+}
+/*to remove the dots from the list whenever we write the ul tags */
+/*-----------x--------------------x----------x----------Global classes*/
+
+
+
+/*--------------------------------------------------nav bar styling*/
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+}
+/*I use height and min-height to collapse the navigation menu*/
+/*---going to style the name blogger*/
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+}
+/*display block  gives a nice padding and allign perfectly with other menus*/
+
+/*To style the links on the right side of website*/
+.nav .nav-menu{    
+    justify-content: space-between;
+}
+/*justify content is space between because to give a gap on the whole nav menu*/
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+/*By giving list style type none diable the dots from the list of menu in nav bar*/
+/* display flex is given to allign the home category etc navs on same row*/
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav .social{
+    padding:1.4rem 0;
+}
+/*given padding to the social icons*/
+/*-------x------------------x-------------------x-------nav bar styling*/
+
+

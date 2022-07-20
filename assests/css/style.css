@@ -130,28 +130,19 @@ ul{
 }
 /*-------x------------------x-------------------x-------nav bar styling*/
 
-/*----------------Making navigation responsive on viewport. Viewport less than or equal to 750 pixel*/
-
-
-/*I use media query  is less than 750 pixel, then we have to add different property to the html element*/
-/*media query is apply to the screen and max width is equal to or less than 750 px*/
-@media only screen and (max-width:750px){
-
-/*----------------Making navigation responsive on viewport. Viewport less than or equal to 750 pixel*/
-
-/*-------------------------------------toggle icon styling if the viewport is less than or equal to 750 pixel*/
+/*-------------------------------------toggle icon styling if the viewport is less than or equal to 520 pixel*/
 .nav .toggle-collapse{
     position: absolute;
-    top:0%;
-    width:90%;
+    top: 0%;
+    width: 90%;
     cursor: pointer;
     display: none;
 }
-/*to see the toggle icon on the right side if the viewport is less than or equal to 750 pixel*/
+/*to see the toggle icon on the right side if the viewport is less than or equal to 520 pixel*/
 .nav .toggle-collapse .toggle-icons{
-display:flex;
-justify-content:flex-end;
-padding: 1.7rem 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
 }
 /*increasing the font-size*/
 .nav .toggle-collapse .toggle-icons i{
@@ -159,10 +150,47 @@ font-size: 1.4rem;
 color:var(--text-gray);
 }
 
-/*to display the toggle icon when the viewport is less than or equal to 750*/
-.nav .toggle-collapse{
-    display: initial;
+/*to display the toggle icon when the viewport is less than or equal to 520*/
+.collapse{
+    height: 20rem;
 }
-}
+/*--x---------x----------x----------x------toggle icon styling if the viewport is less than or equal to 750 pixel*/
 
-/*-------------------------------------toggle icon styling if the viewport is less than or equal to 750 pixel*/
+
+
+/*----------viewport less than or equal to 520px-----------------------------------------------*/
+/*----------------Making navigation responsive on viewport. Viewport less than or equal to 520 pixel*/
+/*I use media query  is less than 750 pixel, then we have to add different property to the html element*/
+/*media query is apply to the screen and max width is equal to or less than 750 px*/
+
+@media only screen and (max-width: 520px){
+    .nav .nav-menu, .nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+/*---x---x----viewport less than or equal to 750px--x---------x------------x-----------x------x------*/
+
+
+
+/*-------------------Main Site Section-----------------------------------------------------------------------*/
+/*-------------site title---------------------------------------------------*/
+main .site-title{
+    background: url('../Background-image.png');
+    background-size: cover;
+    height: 110vh;
+    display:flex;
+    justify-content: center;
+}
+/* upto height styling image has been shown up on the live site */
+/*Display: flex. has been given to show the text in the middle of the image and to show the text horizontally
+in the center, Justify-content is used*/
+
+
+/*---------xx----site title-------xx--------x---------xx-----------------------*/
+
+
+
+/*-----x------x--------Main Site Section---------------x------------x-------------x-------------x-------x----x--*/

@@ -61,6 +61,31 @@ ul{
     list-style-type: none;
 }
 /*to remove the dots from the list whenever we write the ul tags */
+
+h1{
+    font-family: var(--Lexend_Deca);
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+/* whenever we try to use h1 and h3 , the default styling will be there*/
+
+h2{
+    font-family: var(--Lexend_Deca);
+}
+
+button.btn{
+    border:none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+
+}
 /*-----------x--------------------x----------x----------Global classes*/
 
 
@@ -176,6 +201,7 @@ color:var(--text-gray);
 
 
 /*-------------------Main Site Section-----------------------------------------------------------------------*/
+
 /*-------------site title---------------------------------------------------*/
 main .site-title{
     background: url('../Background-image.png');
@@ -183,11 +209,32 @@ main .site-title{
     height: 110vh;
     display:flex;
     justify-content: center;
-}
-/* upto height styling image has been shown up on the live site */
+    /* upto height styling image has been shown up on the live site */
 /*Display: flex. has been given to show the text in the middle of the image and to show the text horizontally
 in the center, Justify-content is used*/
+}
 
+/*padding has been given to add space on text*/
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+main .site-title h1,h3{
+    margin: .3rem;
+    }
+
+    main .site-title .btn{
+        margin: 1.8rem;
+        background: var(--sky);
+        
+    }
+
+    main .site-title .btn:hover{
+        background: transparent;
+        border: 1px solid var(--white);
+        color: var(--white);
+    }
 
 /*---------xx----site title-------xx--------x---------xx-----------------------*/
 

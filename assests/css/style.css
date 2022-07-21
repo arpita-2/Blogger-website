@@ -86,6 +86,15 @@ button.btn{
     cursor: pointer;
 
 }
+
+span{
+    font-family: var(--Abel);
+}
+
+.container{
+    margin: 0 5vw;
+}
+/*margin has been given to create a gap between cards in owl carousel*/
 /*-----------x--------------------x----------x----------Global classes*/
 
 
@@ -235,9 +244,85 @@ main .site-title h1,h3{
         border: 1px solid var(--white);
         color: var(--white);
     }
-
 /*---------xx----site title-------xx--------x---------xx-----------------------*/
 
+
+/*------------------blog Carosuel--------------------------------------------------*/
+main .blog{
+    background: url('../Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+/*to add padding on the blog post with the site title*/
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+/*flex-direction is column because, i want to add the each lines in new column*/
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+/*styling of only blog title class*/
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+/*styling of button */
+
+main .blog-content span{
+    display: block;
+}
+/*to show the text in a block*/
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+/*So here I am styling the left and right arrow , and after giving top it moves towards the upper direction to the 
+left side of the website*/
+/*so when margin 0 is given and width 100% then it move towards the centre of the website*/
+
+
+/*owl-nav class is access to initialize when we use nav:true property in javascript and we already done that so we can use this class*/
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+/*after changing color n all the hover effect is showing on the arrow, so I am going to remove this because i dont
+want any kind of hover effect on the prev and next arrow*/
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight);
+}
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+/*class-owl has been given because to remove the hover effect from all owl-carousel thing in that particular section*/
+
+
+
+/*----x--x-----x------blog Carosuel------x--------x----------x---------------------*/
 
 
 /*-----x------x--------Main Site Section---------------x------------x-------------x-------------x-------x----x--*/

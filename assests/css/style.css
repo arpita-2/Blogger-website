@@ -320,9 +320,19 @@ want any kind of hover effect on the prev and next arrow*/
 }
 /*class-owl has been given because to remove the hover effect from all owl-carousel thing in that particular section*/
 
-
-
 /*----x--x-----x------blog Carosuel------x--------x----------x---------------------*/
+
+/*---------------------------------------Site Content--------------------------------------------*/
+
+main .site-content{
+    display: grid;
+    /*want to display site content as a grid column*/
+    grid-template-columns: 70% 30%;
+}
+
+
+
+/*---------------------------------------Site Content--------------------------------------------*/
 
 
 /*-----x------x--------Main Site Section---------------x------------x-------------x-------------x-------x----x--*/

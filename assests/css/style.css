@@ -1,0 +1,585 @@
+
+@import url('../css/fonts.css');
+/*Fonts.css  file imported in style.css*/
+
+
+
+
+/*--margin given to html body is 0% */
+/*box sizing is border box which  will help to give padding and margin 
+to the whole element*/
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+/*Creating variable in css using root selector*/
+:root{
+    /*---------theme colour family*/
+    /*To create a variable you have to specify the name of the variable and always start with the prefix double--*/
+    --text-gray: #3f4954;
+    --text-light : #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+/*Gradient colors*/
+--sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+
+
+    /*--------theme font family*/
+    /*To create a variable you have to specify the name of the variable and always start with the prefix double--*/
+    --Abel:'Abel', cursive;
+    --Anton:'Anton',cursive;
+    --Josefin_Sans:'Josefin_Sans',cursive;
+    --Lexend_Deca:'Lexend_Deca',cursive;
+    --Livvic:'Livvic',cursive;
+
+}
+
+/*---------------------------------------------------Global classes*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+/*text decoration none is given to remove the underline from the text*/
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+/*creates the links on the same row*/
+/* flexx wrap is given because when we try to squeeze the size of display then the social media icons
+will come together below the first line. It will not show that some icons are present on 
+upper side and some are in below part*/
+
+ul{
+    list-style-type: none;
+}
+/*to remove the dots from the list whenever we write the ul tags */
+
+h1{
+    font-family: var(--Lexend_Deca);
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+/* whenever we try to use h1 and h3 , the default styling will be there*/
+
+h2{
+    font-family: var(--Lexend_Deca);
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+span{
+    font-family: var(--Abel);
+}
+
+.container{
+    margin: 0 5vw;
+}
+/*margin has been given to create a gap between cards in owl carousel*/
+
+.text-gray{
+    color: var(--text-gray);
+}
+p{
+    font-family: var(--Lexend_Deca);
+    color: var(--text-light);
+}
+
+/*-----------x--------------------x----------x----------Global classes*/
+
+
+
+/*--------------------------------------------------nav bar styling*/
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+}
+/*I use height and min-height to collapse the navigation menu*/
+/*---going to style the name blogger*/
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend_Deca);
+    font-size: 1.6rem;
+}
+/*display block  gives a nice padding and allign perfectly with other menus*/
+/* to write a variale you should use var(). Here variable specify the root value to this font-family*/
+
+/*To style the links on the right side of website*/
+.nav .nav-menu{    
+    justify-content: space-between;
+}
+/*justify content is space between because to give a gap on the whole nav menu*/
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+/*By giving list style type none diable the dots from the list of menu in nav bar*/
+/* display flex is given to allign the home category etc navs on same row*/
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+/*created a hover effect on nav links or nav menu I can say*/
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+
+}
+
+/*Changing the text colour of nav links when it showing the hover effect*/
+.nav .nav-items .nav-link:hover a{
+    color:var(--white);
+}
+
+.nav .social{
+    padding:1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 .2rem;
+
+}
+/*given padding to the social icons*/
+/*given hover effect to social icons*/
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+/*-------x------------------x-------------------x-------nav bar styling*/
+
+/*-------------------------------------toggle icon styling if the viewport is less than or equal to 520 pixel*/
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+/*to see the toggle icon on the right side if the viewport is less than or equal to 520 pixel*/
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+/*increasing the font-size*/
+.nav .toggle-collapse .toggle-icons i{
+font-size: 1.4rem;
+color:var(--text-gray);
+}
+
+/*to display the toggle icon when the viewport is less than or equal to 520*/
+.collapse{
+    height: 20rem;
+}
+/*--x---------x----------x----------x------toggle icon styling if the viewport is less than or equal to 750 pixel*/
+
+
+
+/*----------viewport less than or equal to 520px-----------------------------------------------*/
+/*----------------Making navigation responsive on viewport. Viewport less than or equal to 520 pixel*/
+/*I use media query  is less than 750 pixel, then we have to add different property to the html element*/
+/*media query is apply to the screen and max width is equal to or less than 750 px*/
+
+@media only screen and (max-width: 520px){
+    .nav .nav-menu, .nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+/*---x---x----viewport less than or equal to 750px--x---------x------------x-----------x------x------*/
+
+
+
+/*-------------------Main Site Section-----------------------------------------------------------------------*/
+
+/*-------------site title---------------------------------------------------*/
+main .site-title{
+    background: url('../Background-image.png');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    /* upto height styling image has been shown up on the live site */
+/*Display: flex. has been given to show the text in the middle of the image and to show the text horizontally
+in the center, Justify-content is used*/
+}
+
+/*padding has been given to add space on text*/
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+main .site-title h1,h3{
+    margin: .3rem;
+    }
+
+    main .site-title .btn{
+        margin: 1.8rem;
+        background: var(--sky);
+        
+    }
+
+    main .site-title .btn:hover{
+        background: transparent;
+        border: 1px solid var(--white);
+        color: var(--white);
+    }
+/*---------xx----site title-------xx--------x---------xx-----------------------*/
+
+
+/*------------------blog Carosuel--------------------------------------------------*/
+main .blog{
+    background: url('../Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+/*to add padding on the blog post with the site title*/
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+/*flex-direction is column because, i want to add the each lines in new column*/
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+/*styling of only blog title class*/
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+/*styling of button */
+
+main .blog-content span{
+    display: block;
+}
+/*to show the text in a block*/
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+/*So here I am styling the left and right arrow , and after giving top it moves towards the upper direction to the 
+left side of the website*/
+/*so when margin 0 is given and width 100% then it move towards the centre of the website*/
+
+
+/*owl-nav class is access to initialize when we use nav:true property in javascript and we already done that so we can use this class*/
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+/*after changing color n all the hover effect is showing on the arrow, so I am going to remove this because i dont
+want any kind of hover effect on the prev and next arrow*/
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight);
+}
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+
+/*class-owl has been given because to remove the hover effect from all owl-carousel thing in that particular section*/
+
+/*----x--x-----x------blog Carosuel------x--------x----------x---------------------*/
+
+/*---------------------------------------Site Content--------------------------------------------*/
+
+main .site-content{
+    display: grid;
+    /*want to display site content as a grid column*/
+    grid-template-columns: 70% 30%;
+    /* Now blog post has been 70% grid column and sidebar has 30% grid column in the same row*/
+}
+
+main .post-content{
+   
+    width: 100%;
+    /*add margin on post-image and post info*/
+}
+/*descendent div of the post content i am using which are post-image and post-title.So Im going to style on
+ly the descendent divs*/
+main .site-content .post-content > .post-image, .post-title{
+padding: 1rem 2rem;
+position: relative;
+/*It will create a padding between post-image and post title divs and position would be relative*/
+}
+
+/*descendent div of the post content i am using which are post-image and post-info.So Im going to style on
+ly the descendent divs*/
+main .site-content .post-content > .post-image .post-info{
+    background: var(--sky);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 20vw;
+    /*by giving position: absolute and the  bottom 0% and the left 20 vw uplift the admin and etc icons and 
+    text to the bottom centre of the post-image*/
+    border-radius: 3rem;
+}
+/*Now im going to select all the division tags inside the post-image*/
+
+main .site-content .post-content > .post-image > div{
+    overflow: hidden;
+    /*it will create a hover effect of zoom in and zoom out without overflowing to other divs*/
+}
+
+main .site-content .post-content > .post-image .img{
+    width:100%;
+    /*this transition code will give a smooth effect of zoom in and zoom out to the image*/
+    transition: all 1s ease;
+}
+main .site-content .post-content > .post-image .post-info span{
+    margin: 0 .5rem;
+    /*To create a margin between the span elememnts like admin, calender and text*/
+}
+
+/*in this post image i want a hover effect on the image*/
+main .site-content .post-content > .post-image .img:hover{
+transform: scale(1.3);
+/*It will create a hover effect of picture larger and smaller on the website but it is creating overlfow effect*/
+/*So now i have to add post-content div where i have select ALL THE DIVISION TAGS INSIDE THE POST-IMAGE*/
+}
+main .post-content .post-title a{
+    font-family: var(--Anton);
+    font-size: 1.5rem;
+}
+
+ main .site-content .post-content .post-title .btn-post{
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background:var(--sky);
+}
+
+main .site-content .pagination{
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 4rem 0;
+    /*now the pagination number will show in the middle of the page*/
+}
+
+main .site-content .pagination a{
+    padding: .6rem .9rem;
+    border-radius: 2rem;
+    margin: 0 .3rem;
+    font-family: var(--Lexend_Deca);
+    /*Now it will add a margin and padding between the < 1 2 3 >*/
+}
+
+main .site-content .pagination .pages{
+    background: var(--text-gray);
+    color: var(--white);
+}
+/*------x---------xx------------------------Site Content---------x---------x-----x--------x------x-------*/
+
+
+/*------------------------------------------SideBar---------------------------------------------------*/
+
+main .site-content > .sidebar .category-list{
+    font-family: var(--Livvic);
+}
+
+main .site-content > .sidebar .category-list .list-items{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    margin: .8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    /*justify content space between is given because there are one word and one number and to design it
+    left hand side for word and right hand side for number*/
+}
+
+main .site-content > .sidebar .category-list .list-items a{
+    color:black;
+}
+
+.site-content .sidebar .popular-post .post-content{
+    padding: 1rem 0;
+
+}
+
+.site-content .sidebar .popular-post h2{
+    padding-top: 8rem;
+    /*add padding from the top*/
+}
+
+.site-content .sidebar .popular-post .post-info{
+    padding: .4rem .1rem !important;
+    bottom: 0rem !important;
+    left: 1.5rem !important;
+    border-radius: 0rem !important;
+    background: white !important;
+}
+/*all this class info are not applying on the styling thing because I am overwriting here. The poat-info has been used before
+    for other post , so its not appliying now any kind of new class inside the side bar*/
+    /*So when we are writing overwrite property then we have to use  !important   near the css styling*/
+    .site-content .sidebar .popular-post .post-title a{
+        font-size: 1rem;
+    }
+
+    .site-content .sidebar .newsletter{
+        padding-top: 10rem;
+    }
+    
+    .site-content .sidebar .newsletter .form-element{
+        padding: .5rem 2rem;
+
+    }
+
+    .site-content .sidebar .newsletter .input-element{
+        width:80%;
+        height: 1.9rem;
+        padding: .3rem .5rem;
+        font-family: var(--Lexend_Deca);
+        font-size: 1rem;
+    }
+
+    .site-content .sidebar .newsletter .form-btn{
+        border-radius: 0;
+        padding: .8rem 32%;
+        /*.8rem is the top and bottom padding and 32% is the left and right padding*/
+        margin: 1rem 0;
+        background: var(--sky);
+    }
+
+    .site-content .sidebar .popular-tags{
+        padding: 5rem 0;
+    }
+
+    .site-content .sidebar .popular-tags .tags .tag{
+        background: var(--sky);
+        border-radius: 3rem ;
+        padding: .4rem 1rem;
+        margin: .4rem .6rem;
+        font-family: var(--Lexend_Deca);
+        color: var(--text-gray);
+
+
+    }
+/*------------x-------------x-----------------SideBar-----------x------------------------x----------------*/
+
+
+/*-----x------x--------Main Site Section---------------x------------x-------------x-------------x-------x----x--*/
+
+
+
+/*---------------------------------Footer---------------------------------------------*/
+footer.footer{
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+
+}
+
+footer.footer .container{
+    display: grid;
+    /*I have make this container as a grid container , now all the items will be present as a grid type*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*So I want to show 4 sections on my footer as a grid style so i have make 4 sections by grid-template-columns
+    and give all the section equally 25% of width. 1fr is used to give equal width to all as per perfect form of dividing
+    columns equally. So instead of 25% , you can write 1fr*/
+
+    /* OR it can be written in other form also like
+    grid-template-column: repeat(4, 1fr);*/
+
+    /*REPEAT 4 is given because i want 4 section in the container*/
+
+
+
+}
+
+footer.footer .container > div{
+    /*  > div has been written to select all the divs inside the container like the divs about us newsletter etc.*/
+    flex-grow: 1;
+    /*The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container.
+
+Note: If the element is not a flexible item, the flex-grow property has no effect*/
+
+    flex-basis: 0%;
+    /*The flex-basis property is a sub-property of the Flexible Box Layout module. It specifies the initial siz
+    e of the flex item, before any available space is distributed according to the flex factors*/
+    padding: 3rem .9rem;
+
+}
+
+
+footer.footer .container .about-us h2{
+color: var(--white);
+}
+
+footer.footer .container .newsletter h2{
+    color:var(--white)
+}
+
+footer.footer .container .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+footer.footer .container .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--Josefin_Sans);
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element span{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*-----x--------x-------------x-------Footer-------x----------x---------------x------x-------*/
